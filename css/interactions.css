@@ -3,10 +3,27 @@
 ==================================== */
 
 .button {
-	color: #fff;
-	background: #4a89ca;
+  color: #fff;
+  border: 2px solid;
+  color: #4a89ca;
+  transition-property: background, color, border-radius;
+  transition-duration: .8s, .5s, .5s;  
+}
+
+.button:hover {
+  background: #4a89ca;
+  color: white;
+  border-radius: 1em;
 }
 
 /* ================================= 
   Photo Overlay Transitions
 ==================================== */
+.photo-overlay {
+  opacity: 0;
+  transition-duration: .8s;
+  transition-property: opacity;
+}
+.photo-overlay:hover {
+  opacity:1;
+}
