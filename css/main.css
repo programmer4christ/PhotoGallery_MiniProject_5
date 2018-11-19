@@ -42,6 +42,7 @@ p {
 ==================================== */
 
 /* ---- Layout Containers ---- */
+
 .container {
 	width: 94.02985075%;
 	max-width: 1260px;
@@ -56,8 +57,14 @@ p {
 	text-align: center;
 	margin-bottom: 4em;
 }
-
+.original-pos {
+/*	background-color: lightgrey;*/
+	height: 100%;
+	display: block;
+	line-height: 0;
+}
 /* ---- Page Elements ---- */
+
 .name {
 	font-size: 1.65em;
 	font-weight: 800;
@@ -71,6 +78,7 @@ p {
 .logo {
 	width: 45px;
 	margin-bottom: .4em;
+	cursor: pointer;
 }
 .photo {
 	position: relative;
@@ -82,16 +90,19 @@ p {
  	max-width: 100%;
 }
 .button {
+	color: #4a89ca;
 	width: 70%;
 	font-weight: 700;
 	display: block;
 	text-decoration: none;
 	text-transform: uppercase;
 	padding: 10px 0;
+	border: 2px solid #4a89ca;
+	border-radius: .5em;
 	margin: auto;
 }
-
 /* ---- Photo Overlay ---- */
+
 .photo-overlay {
 	color: #fff;
 	position: absolute;
@@ -101,11 +112,25 @@ p {
 	left: 0;
 	padding-left: 20px;
 	padding-right: 20px;
-	display: flex;
+
+	display: flex; /* For centering text inside .photo-overlay */
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background: rgba(0,0,0, .65);
+	background: rgba(0,0,0, .5);
+}
+.photo-overlay h3 {
+	margin-top: 0;
+}
+.slide .button {
+	color: #fff;
+	padding: 20px 0;
+	background: rgba(74,137,202, .8);
+	margin: 0;
+}
+.slide .photo-overlay {
+	opacity: 1;
+	background: #345d88;
 }
 /* ---- Float clearfix ---- */
 
@@ -126,7 +151,7 @@ p {
 }
 @media (min-width: 769px) {
 	.container {
-		padding: 0 2.25em 4em;
+		padding: 0 2.25em 3em;
 	}
 	.photo-container {
 		width: 48%;
